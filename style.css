@@ -50,19 +50,28 @@ h1 {
     width: 100%; /* Responsive width */
     max-width: 500px; /* Maximum width */
     padding: 10px;
-    color: #FF69B4;
+    color: #FF69B4; /* HotPink for text color */
     border-image: linear-gradient(to right, red, green, blue) 1;
-    animation: borderAnimation 3s linear infinite;
-    background: rgba(255, 105, 180, 0.1);
-    border-radius: 10px;
+    animation: borderAnimation 5s linear infinite; /* Slower and smoother animation */
+    background: rgba(255, 105, 180, 0.1); /* Subtle pink background inside the box */
+    border-radius: 10px; /* Rounded corners for the small container */
     margin-top: 20px;
 }
 
 @keyframes borderAnimation {
     0% {
-        border-image-source: linear-gradient(to right, red, green, blue, red);
+        border-image-source: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
+    25% {
+        border-image-source: linear-gradient(to right, orange, yellow, green, blue, indigo, violet, red);
+    }
+    50% {
+        border-image-source: linear-gradient(to right, yellow, green, blue, indigo, violet, red, orange);
+    }
+    75% {
+        border-image-source: linear-gradient(to right, green, blue, indigo, violet, red, orange, yellow);
     }
     100% {
-        border-image-source: linear-gradient(to right, blue, red, green, blue);
+        border-image-source: linear-gradient(to right, blue, indigo, violet, red, orange, yellow, green);
     }
 }
